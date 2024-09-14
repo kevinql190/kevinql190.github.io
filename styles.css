@@ -5,14 +5,27 @@
     box-sizing: border-box;
 }
 
-/* Full-screen hero section */
+/* Ensure full height for both sections */
 body, html {
     height: 100%;
     font-family: Arial, sans-serif;
+    scroll-behavior: smooth; /* Smooth scroll behavior */
 }
 
+/* Enable scroll snapping */
+body {
+    scroll-snap-type: y mandatory; /* Snap vertically and forcefully */
+    overflow-y: scroll; /* Enable vertical scrolling */
+}
+
+/* Sections behave as full-screen snap points */
+.hero, .content {
+    height: 100vh; /* Full viewport height */
+    scroll-snap-align: start; /* Snap at the start of the section */
+}
+
+/* Hero section with centered text */
 .hero {
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,16 +39,15 @@ h1 {
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
-/* Content section after scrolling */
+/* Content section styles */
 .content {
-    height: 100vh;
     padding: 20px;
     background-color: #f4f4f4;
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
 
-/* Classes triggered by scroll event */
+/* Change styles when user scrolls past a certain point */
 .scrolled .hero {
     background-color: #f4f4f4;
 }
