@@ -1,0 +1,50 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Full-screen hero section */
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    transition: background-color 1s ease-in-out;
+    color: white;
+    font-size: 4rem;
+}
+
+h1 {
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Content section after scrolling */
+.content {
+    height: 100vh;
+    padding: 20px;
+    background-color: #f4f4f4;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Classes triggered by scroll event */
+.scrolled .hero {
+    background-color: #f4f4f4;
+}
+
+.scrolled h1 {
+    opacity: 0;
+    transform: translateY(-50px);
+}
+
+.scrolled .content {
+    opacity: 1;
+}
