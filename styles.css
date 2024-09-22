@@ -3,60 +3,438 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Bricolage Grotesque", sans-serif;
+}
+
+a {
+    color: #a69cac;
+    text-decoration: none;
+    font-weight: bolder;
 }
 
 /* Ensure full height for both sections */
 body, html {
+    background: linear-gradient(#0d0c1d, #04395e);
+    color: white;
     height: 100%;
     font-family: Arial, sans-serif;
     scroll-behavior: smooth; /* Smooth scroll behavior */
 }
 
-/* Enable scroll snapping */
-body {
-    scroll-snap-type: y mandatory; /* Snap vertically and forcefully */
-    overflow-y: scroll; /* Enable vertical scrolling */
+
+/*- - - - - - - - - - - - - - - - - - - - - - - - -*/
+
+/* Main container with left nav and content */
+.container {
+    display: flex;
+    height: 100vh; /* Full screen height */
+    overflow: hidden;
 }
 
-/* Sections behave as full-screen snap points */
+/* Fixed left nav */
+.left-nav {
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100%;
+    background-color: #161b33;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    opacity: 30%;
+}
+.div-slides {
+    transform: translateX(-100%); /* Start off-screen */
+    animation: slideIn 1s ease-out forwards; /* Animation on page load */
+}
+
+.return-home {
+    position: absolute;
+    padding: 30px 10px;
+    background-color: #04395e;
+    width: 100%;
+    border-radius: 0px 3px;
+    cursor: pointer;
+    top: 0px;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+}
+
+    .return-home:hover {
+        background-color: #2980b9;
+    }
+
+/* Slide-in animation */
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%); /* Off-screen */
+    }
+
+    100% {
+        transform: translateX(0); /* Fully visible */
+    }
+}
+
+/* Slider in the left nav */
+.slider {
+    position: relative;
+    width: 10px;
+    height: 200px; /* Adjust as needed */
+    background-color: #a69cac;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    overflow: hidden; /* Ensures the fill stays within the rounded edges */
+}
+
+/* The filling part of the slider */
+.slider-fill {
+    position: absolute;
+    top: 0; /* Change from bottom to top */
+    left: 0;
+    width: 100%;
+    height: 0; /* Start from 0% height */
+    background: linear-gradient(to bottom, #ceb095, white);
+    transition: height 0.3s ease;
+    border-radius: 20px;
+}
+
+/* Nav links in the left nav */
+.nav-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+    .nav-links li {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+.contacts {
+    position: absolute;
+    bottom: 0;
+    list-style: none;
+    padding: 0;
+}
+
+    .contacts li {
+        width: 100%;
+        text-align: center;
+        position: relative; /* Needed to position the hover text next to the li */
+        padding: 10px 40px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        display: inline-block;
+    }
+
+/* The hidden div that slides in on hover */
+.hover-text {
+    position: absolute;
+    top: 0;
+    left: 100%; /* Position it off-screen, to the right of the li */
+    background-color: rgba(0, 0, 0, 0.7); /* Transparent black */
+    color: white;
+    padding: 10px;
+    white-space: nowrap; /* Prevent text wrapping */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transform: translateX(20px); /* Slide it out initially */
+    opacity: 0; /* Initially hidden */
+}
+
+/* When hovering over li, the text slides in */
+.contacts li:hover .hover-text {
+    transform: translateX(0); /* Slide it in */
+    opacity: 1; /* Fully visible */
+}
+
+/* Content wrapper next to the fixed left nav */
+.content-wrapper {
+    padding-left: 100px; /* Space for the left nav */
+    height: 100vh;
+    overflow-y: scroll; /* Enable scrolling */
+    scroll-snap-type: y mandatory; /* Snap vertically and forcefully */
+    width: 100%;
+}
+
+    /*Scroll*/
+    .content-wrapper::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera */
+    }
+
 .hero, .content {
     height: 100vh; /* Full viewport height */
     scroll-snap-align: start; /* Snap at the start of the section */
 }
 
-/* Hero section with centered text */
+/* Hero section */
 .hero {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #333;
-    transition: background-color 1s ease-in-out;
     color: white;
-    font-size: 4rem;
+    font-size: 1.5rem;
+    transition: background-color 1s ease-in-out;
+}
+
+    .hero::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 40vh; /* Adjust the height of the gradient */
+        background: linear-gradient(transparent, #0d0c1d);
+        pointer-events: none; /* Allow clicks through the gradient */
+        animation: fadeIn 2s ease-out forwards; /* Animation on page load */
+        transition: opacity 0.5s ease-out; /* Smooth transition for fading out */
+    }
+.fade {
+    text-align: center;
+    position: absolute; /* Stack them on top of each other */
+    width: 100%; /* Ensure full width for centering */
+    opacity: 0; /* Start hidden */
+    animation: fadeAnimation 10s infinite; /* Set animation duration and repeat */
+}
+
+/* Keyframes for alternating fade-in and fade-out */
+@keyframes fadeAnimation {
+    0%, 60%, 100% {
+        opacity: 0; /* Initially hidden */
+        z-index: -1;
+    }
+
+    20%, 40% {
+        opacity: 1; /* Fade in */
+        z-index: 6;
+    }
+}
+
+/* Control the timing for each h1 */
+h1:nth-child(1) {
+    animation-delay: 0s; /* First h1 starts immediately */
+}
+
+h1:nth-child(2) {
+    line-height: 50px;
+    animation-delay: 5s; /* Second h1 starts after the first one has faded out */
+}
+
+/* Scroll indicator at the bottom of hero */
+.scroll-indicator {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    background-image: url('img/scroll.png'); /* Replace with arrow GIF */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1; /* Above the gradient */
+    animation: fadeIn 3s ease-out forwards, ondulate 2s infinite ease-in-out 3s; /* Start ondulation after fadeIn */
+}
+
+/* Keyframes for the ondulating (up and down) animation */
+@keyframes ondulate {
+    0%, 100% {
+        transform: translate(-50%, 0); /* Starting position */
+    }
+
+    50% {
+        transform: translate(-50%, -20px); /* Move up */
+    }
 }
 
 h1 {
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    font-family: "Archivo", sans-serif;
+    font-weight: 200;
+    animation: fadeIn 2s ease-in forwards; /* 2s fade-in animation */
 }
 
-/* Content section styles */
+/* Fade-in keyframes */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 .content {
-    padding: 20px;
-    background-color: #f4f4f4;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
+    display: flex;
+    padding: 100px 0px;
 }
 
-/* Change styles when user scrolls past a certain point */
-.scrolled .hero {
-    background-color: #f4f4f4;
+.left-column {
+    flex: 2; /* Takes up 50% of the width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 10%;
 }
 
-.scrolled h1 {
-    opacity: 0;
-    transform: translateY(-50px);
+    .left-column h2 {
+        width: 100%;
+        font-size: 3rem;
+        padding-block-end: 1rem;
+        background: linear-gradient(45deg, #04395e, #829CAF); /* Your gradient colors */
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; /* Makes the text color transparent */
+    }
+
+    .left-column p {
+        color: #dedede;
+        width: 100%;
+        font-size: 1.2rem;
+        font-weight: 100;
+        padding-block-end: 1.2rem;
+    }
+
+.links-container {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
 }
 
-.scrolled .content {
-    opacity: 1;
+    .links-container a {
+        display: block;
+        margin: 10px 0;
+        width: 100%;
+        padding: 10px 30px;
+        background-color: #04395e; /* Button color */
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+        transition: background-color 0.3s;
+    }
+
+        .links-container a:hover {
+            background-color: #0056b3; /* Darker button color on hover */
+        }
+
+.right-column {
+    flex: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    .right-column img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin-right: 7%;
+        border-radius: 10px;
+        opacity: 1;
+        transition: opacity 0.7s ease-in-out;
+    }
+    .right-column img.fade-out{
+        opacity: 0;
+    }
+
+/* Slider Gallery */
+#slider-container {
+    position: relative;
+    width: 60%;
+    height: 30vw;
+    perspective: 1400px;
+    transform-style: preserve-3d;
+}
+
+input[type=radio] {
+    position: relative;
+    top: 108%;
+    left: 50%;
+    width: 18px;
+    height: 18px;
+    margin: 0 15px 0 0;
+    opacity: 0.4;
+    transform: translateX(-83px);
+    cursor: pointer;
+}
+
+
+    input[type=radio]:nth-child(5) {
+        margin-right: 0px;
+    }
+
+    input[type=radio]:checked {
+        opacity: 1;
+    }
+
+:root {
+    accent-color: #04395e;
+}
+
+#slider-container label {
+    position: absolute;
+    width: 100%;
+    aspect-ratio: 16/9;
+    background-size: cover;
+    left: 0;
+    bottom: 25%;
+    color: white;
+    font-size: 70px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 400ms ease;
+}
+/* Slider Functionality */
+
+/* Active Slide */
+#s1:checked ~ #slide1, #s2:checked ~ #slide2, #s3:checked ~ #slide3, #s4:checked ~ #slide4, #s5:checked ~ #slide5 {
+    box-shadow: 0 13px 26px rgba(0,0,0, 0.3), 0 12px 6px rgba(0,0,0, 0.2);
+    transform: translate3d(0%, 0, 0px);
+}
+
+/* Next Slide */
+#s1:checked ~ #slide2, #s2:checked ~ #slide3, #s3:checked ~ #slide4, #s4:checked ~ #slide5, #s5:checked ~ #slide1 {
+    box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
+    transform: translate3d(15%, 0, -100px);
+}
+
+
+/* Next to Next Slide */
+#s1:checked ~ #slide3, #s2:checked ~ #slide4, #s3:checked ~ #slide5, #s4:checked ~ #slide1, #s5:checked ~ #slide2 {
+    box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+    transform: translate3d(30%, 0, -250px);
+}
+
+/* Previous to Previous Slide */
+#s1:checked ~ #slide4, #s2:checked ~ #slide5, #s3:checked ~ #slide1, #s4:checked ~ #slide2, #s5:checked ~ #slide3 {
+    box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+    transform: translate3d(-30%, 0, -250px);
+}
+
+/* Previous Slide */
+#s1:checked ~ #slide5, #s2:checked ~ #slide1, #s3:checked ~ #slide2, #s4:checked ~ #slide3, #s5:checked ~ #slide4 {
+    box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
+    transform: translate3d(-15%, 0, -100px);
 }

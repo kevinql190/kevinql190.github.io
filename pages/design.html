@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Portfolio - Design</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&family=Archivo:ital,wght@0,100..900;1,100..900&family=BioRhyme:wght@200..800&family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Left nav with vertical slider -->
+        <nav class="left-nav">
+            <a href="../index.html"class="return-home div-slides">HOME</a>
+            <div class="slider">
+                <div class="slider-fill"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#section1">I</a></li>
+                <li><a href="#section2">II</a></li>
+            </ul>
+            <ul class="contacts">
+                <li>
+                    <a href="mailto:kevinqiu190@gmail.com">@</a>
+                    <div class="hover-text" id="emailDiv">kevinqiu190@gmail.com</div>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/kevin-qiu-lo-670769313" target="_blank">in</a>
+                    <div class="hover-text"><a href="https://www.linkedin.com/in/kevin-qiu-lo-670769313" target="_blank">Linkedin</a></div>
+                </li>
+                <li>
+                    <a href="https://github.com/kevinql190" target="_blank">GH</a>
+                    <div class="hover-text"><a href="https://github.com/kevinql190" target="_blank">Github</a></div>
+                </li>
+            </ul>
+        </nav>
+    
+        <!-- Main content including hero and content sections -->
+        <div class="content-wrapper">    
+            <!-- Content sections -->
+            <div id="section1" class="content">
+                <div class="left-column">
+                    <h2>Giravolt x CITM hackaton</h2>
+                    <p><a href="https://www.citm.upc.edu/blog/giravolt-crea-lab-el-nou-laboratori-dinnovacio-digital-del-citm/?lang=ca"><b>Giravolt</b></a> is an initiative from la Generalitat, in collaboration with CITM, that aims to protect and promote Catalan heritage using virtual reality (VR) and other immersive environments.<p/>
+                    <p>As part of this project, historical Catalan sites and artifacts were scanned and turned into 3D models to preserve them for future generations.</p>
+                    <p>A Hackathon was held where teams of around 4 people brainstormed projects to promote and conserve Catalonia's cultural heritage. Our team's idea was selected from 9 others to be developed in early 2023.</p>
+                    <p>As a game designer in this project, I proposed using virtual reality to create an interactive experience based on the traditional "wolf" game.<p/>
+                    <p>Our idea allowed players to use avatars based on historical objects and engage with cultural heritage through immersive gameplay.</p>
+                    <p><a href="https://x.com/patrimonigencat/status/1597633298330968071?cxt=HHwWjoDTxaXB96ssAAAA" target="_blank"><b>Hackaton Giravolt Crea Lab - POSTIT team</b></a></p>
+                </div>
+                <div class="right-column">
+                    <div id="slider-container">
+                        <input type="radio" name="slider-container" id="s1" checked>
+                        <input type="radio" name="slider-container" id="s2">
+                        <input type="radio" name="slider-container" id="s3">
+                        <input type="radio" name="slider-container" id="s4">
+                        <input type="radio" name="slider-container" id="s5">
+
+                        <label for="s1" id="slide1" style="background-image: url('../img/giravolt1.jpg');"></label>
+                        <label for="s2" id="slide2" style="background-image: url('../img/giravolt2.jpg');"></label>
+                        <label for="s3" id="slide3" style="background-image: url('../img/hackaton1.png');"></label>
+                        <label for="s4" id="slide4" style="background-image: url('../img/hackaton2.png');"></label>
+                        <label for="s5" id="slide5" style="background-image: url('../img/giravolt3.png');"></label>
+                    </div>
+                </div>
+            </div>
+            <div id="section2" class="content">
+                <div class="left-column">
+                    <h2>Celery Design Process</h2>
+                    <p><a href="https://kolageno.itch.io"><b>Celery</b></a> is an idea created from scratch by team Kolageno.</p>
+                    <p>This videogame is a linear dungeon crawler that features an original combat system based on using the enemies themselves as weapons.</p>
+                    <p>Combined with an interactive environment, the player is given the possibility of facing each challenge creatively.</p>
+                    <p>Note: This is a team project, not all content is mine.</p>
+                    <div class="links-container" data-gallery="1">
+                        <a data-image="../img/design1.png">Brainstorming</a>
+                        <a data-image="../img/design2.png">References</a>
+                        <a data-image="../img/design3.png">Concept Discovery</a>
+                        <a data-image="../img/design4.png">Gameplay</a>
+                    </div>
+                </div>
+                <div class="right-column">
+                    <img id="display-image1" src="../img/celery2.png" alt="Display" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Portfolio - User Interface</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&family=Archivo:ital,wght@0,100..900;1,100..900&family=BioRhyme:wght@200..800&family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Left nav with vertical slider -->
+        <nav class="left-nav">
+            <a href="../index.html"class="return-home div-slides">HOME</a>
+            <div class="slider">
+                <div class="slider-fill"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#section1">I</a></li>
+                <li><a href="#section2">II</a></li>
+            </ul>
+            <ul class="contacts">
+                <li>
+                    <a href="mailto:kevinqiu190@gmail.com">@</a>
+                    <div class="hover-text" id="emailDiv">kevinqiu190@gmail.com</div>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/kevin-qiu-lo-670769313" target="_blank">in</a>
+                    <div class="hover-text"><a href="https://www.linkedin.com/in/kevin-qiu-lo-670769313" target="_blank">Linkedin</a></div>
+                </li>
+                <li>
+                    <a href="https://github.com/kevinql190" target="_blank">GH</a>
+                    <div class="hover-text"><a href="https://github.com/kevinql190" target="_blank">Github</a></div>
+                </li>
+            </ul>
+        </nav>
+    
+        <!-- Main content including hero and content sections -->
+        <div class="content-wrapper">    
+            <!-- Content sections -->
+            <div id="section1" class="content">
+                <div class="left-column">
+                    <h2>Giravolt development</h2>
+                    <p>During the development of the game Masks&Marquises - not released, our team reamVR (former POSTIT), continued the design progress started in <a href="https://www.citm.upc.edu/blog/giravolt-crea-lab-el-nou-laboratori-dinnovacio-digital-del-citm/?lang=ca"><b>Giravolt x CITM hackaton</b></a> <p/>
+                    <p>Furthermore, we were responsible for the design of the user interface, specifically the menu, in three languages: English, Catalan and Spanish</p>
+                    <p>I additionally played a key role in the localization efforts within Unity, as well as enhancing the navigation functionality.</p>
+                </div>
+                <div class="right-column">
+                    <img src="../img/ui_giravolt.png" alt="User Interface Giravolt" />
+                </div>
+            </div>
+            <div id="section2" class="content">
+                <div class="left-column">
+                    <h2>Celery UI Integration</h2>
+                    <p>In contrast to the previous project, in <a href="https://kolageno.itch.io"><b>Celery</b></a> I was in charge of implementing, among others, the UI to Unity.</p>
+                    <p>My tasks include UI scripting, user settings, UI navigation, HUD processes and scene management.</p>
+                    <p>I provided to the game features such as localization in three languages, audio and video settings, gameplay settings such as aim sensibility, and save and load system.</p>
+                </div>
+                <div class="right-column">
+                    <div id="slider-container">
+                        <input type="radio" name="slider-container" id="s1" checked>
+                        <input type="radio" name="slider-container" id="s2">
+                        <input type="radio" name="slider-container" id="s3">
+                        <input type="radio" name="slider-container" id="s4">
+                        <input type="radio" name="slider-container" id="s5">
+
+                        <label for="s1" id="slide1" style="background-image: url('../img/ui_celery1.png');"></label>
+                        <label for="s2" id="slide2" style="background-image: url('../img/ui_celery2.png');"></label>
+                        <label for="s3" id="slide3" style="background-image: url('../img/ui_celery3.png');"></label>
+                        <label for="s4" id="slide4" style="background-image: url('../img/ui_celery4.png');"></label>
+                        <label for="s5" id="slide5" style="background-image: url('../img/ui_celery5.png');"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -6,16 +6,95 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Portfolio Kevin Qiu</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&family=Archivo:ital,wght@0,100..900;1,100..900&family=BioRhyme:wght@200..800&family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="hero">
-        <h1>Your Name</h1>
-    </div>
-
-    <div class="content">
-        <p>Here is the rest of the content that appears after scrolling.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in venenatis enim.</p>
-        <p>Vivamus luctus urna sed urna ultricies ac tempor dui sagittis.</p>
+    <div class="container">
+        <!-- Left nav with vertical slider -->
+        <nav class="left-nav div-slides">
+            <div class="slider">
+                <div class="slider-fill"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#section1">●</a></li>
+                <li><a href="#section2">I</a></li>
+                <li><a href="#section3">II</a></li>
+                <li><a href="#section4">III</a></li>
+            </ul>
+            <ul class="contacts">
+                <li>
+                    <a href="mailto:kevinqiu190@gmail.com">@</a>
+                    <div class="hover-text" id="emailDiv">kevinqiu190@gmail.com</div>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/kevin-qiu-lo-670769313" target="_blank">in</a>
+                    <div class="hover-text"><a href="https://www.linkedin.com/in/kevin-qiu-lo-670769313" target="_blank">Linkedin</a></div>
+                </li>
+                <li>
+                    <a href="https://github.com/kevinql190" target="_blank">GH</a>
+                    <div class="hover-text"><a href="https://github.com/kevinql190" target="_blank">Github</a></div>
+                </li>
+            </ul>
+        </nav>
+    
+        <!-- Main content including hero and content sections -->
+        <div class="content-wrapper">
+            <!-- Hero section with scroll indicator -->
+            <div class="hero" id="section1">
+                <h1 class="fade">Hi! I'm Kevin, nice to meet you</h1>
+                <h1 class="fade">I'm a Multimedia student from <a href="https://www.citm.upc.edu/cat/estudis/grau-multimedia-ext/"><i>CITM</i></a>, Barcelona</h1>
+                <div class="scroll-indicator"></div>
+            </div>
+    
+            <!-- Content sections -->
+            <div id="section2" class="content">
+                <div class="left-column">
+                    <h2>I love videogames</h2>
+                    <p>And I love developing them too! I have participated in several team projects and worked in different roles.</p>
+                    <p>Winner of 2022 <a href="https://www.citm.upc.edu/blog/giravolt-crea-lab-el-nou-laboratori-dinnovacio-digital-del-citm/?lang=ca"><b>Giravolt x CITM hackathon</b></a>,<br/> best idea for a VR project</p>
+                    <p><a href="https://kolageno.itch.io"><b>Celery</b></a> - 2024 Project by Kolageno Team</p>
+                    <div class="links-container" data-gallery="1">
+                        <a data-image="img/hackaton2.png" href="pages/design.html">Design</a>
+                        <a data-image="img/ui_giravolt.png" href="pages/user_interface.html">User Interface</a>
+                        <a data-image="image3.jpg">Code</a>
+                        <a data-image="img/music1.png" href="pages/music.html">Music</a>
+                    </div>
+                </div>
+                <div class="right-column">
+                    <img id="display-image1" src="img/celery2.png" alt="Display" />
+                </div>
+            </div>
+            <div id="section3" class="content">
+                <div class="left-column">
+                    <h2>I am a Web Developer</h2>
+                    <p>I have experience in designing user-centered web pages, as well as developing both front-end and back-end solutions.</p>
+                    <div class="links-container" data-gallery="2">
+                        <a data-image="img/giravolt1.jpg">User Centered Design</a>
+                        <a data-image="img/giravolt2.jpg">HTML, CSS and JavaScript</a>
+                        <a data-image="img/giravolt1.jpg">Data bases and php</a>
+                    </div>
+                </div>
+                <div class="right-column">
+                    <img id="display-image2" src="" alt="Display 1" />
+                </div>
+            </div>
+            <div id="section4" class="content">
+                <div class="left-column">
+                    <h2>I do other stuff!</h2>
+                    <div class="links-container" data-gallery="3">
+                        <a data-image="image22.jpg">Visual identity Guide</a>
+                        <a data-image="image23.jpg">Magazine design</a>
+                        <a data-image="image34.jpg">3D Animation</a>
+                    </div>
+                </div>
+                <div class="right-column">
+                    <img id="display-image3" src="" alt="Display" />
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>
