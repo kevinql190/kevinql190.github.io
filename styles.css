@@ -280,6 +280,7 @@ h1 {
 }
 
 .content {
+    position: relative;
     display: flex;
     padding: 100px 0px;
 }

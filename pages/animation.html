@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Portfolio - Design</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&family=Archivo:ital,wght@0,100..900;1,100..900&family=BioRhyme:wght@200..800&family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Left nav with vertical slider -->
+        <nav class="left-nav">
+            <a href="../index.html"class="return-home div-slides">HOME</a>
+            <div class="slider">
+                <div class="slider-fill"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#section1">I</a></li>
+                <li><a href="#section2">II</a></li>
+                <li><a href="#section3">III</a></li>
+                <li><a href="#section4">IV</a></li>
+            </ul>
+            <ul class="contacts">
+                <li>
+                    <a href="mailto:kevinqiu190@gmail.com">@</a>
+                    <div class="hover-text" id="emailDiv">kevinqiu190@gmail.com</div>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/kevin-qiu-lo-670769313" target="_blank">in</a>
+                    <div class="hover-text"><a href="https://www.linkedin.com/in/kevin-qiu-lo-670769313" target="_blank">Linkedin</a></div>
+                </li>
+                <li>
+                    <a href="https://github.com/kevinql190" target="_blank">GH</a>
+                    <div class="hover-text"><a href="https://github.com/kevinql190" target="_blank">Github</a></div>
+                </li>
+            </ul>
+        </nav>
+    
+        <!-- Main content including hero and content sections -->
+        <div class="content-wrapper">    
+            <!-- Content sections -->
+            <div id="section1" class="content">
+                <div class="left-column">
+                    <h2>Animation</h2>
+                    <p>In my degree, Animation 3D was the subject in which I achieved my highest GPA, a 9.9 on the Spanish grading scale (0-10).</p>
+                    <p>I have completed several exercises covering the fundamentals of both 2D and 3D animation.</p>
+                    <p>Key exercises include the bouncing ball, pendulum, and walk cycle.</p>
+                    <p>These projects helped me develop a strong foundation in animation principles.</p>
+                </div>
+                <div class="right-column">
+                    <div id="slider-container">
+                        <input type="radio" name="slider-container" id="s1" checked>
+                        <input type="radio" name="slider-container" id="s2">
+                        <input type="radio" name="slider-container" id="s3">
+                        <input type="radio" name="slider-container" id="s4">
+                        <input type="radio" name="slider-container" id="s5">
+
+                        <label for="s1" id="slide1" style="background-image: url('../img/bouncing_ball.gif');"></label>
+                        <label for="s2" id="slide2" style="background-image: url('../img/2d_anim.gif');"></label>
+                        <label for="s3" id="slide3" style="background-image: url('../img/walk2.png');"></label>
+                        <label for="s4" id="slide4" style="background-image: url('../img/walk1.gif');"></label>
+                        <label for="s5" id="slide5" style="background-image: url('../img/walk3.gif');"></label>
+                    </div>
+                </div>
+                <div class="scroll-indicator"></div>
+            </div>
+            <div id="section2" class="content">
+                <div class="left-column">
+                    <h2>Walk cycle</h2>
+                    <p>For the walk cycle exercises, I focused on creating realistic and fluid character movement by applying timing, weight, and balance principles.</p>
+                    <p>I also experimented with different character personalities and walking styles to enhance the expressiveness and variety in animation.</p>
+                    <div class="links-container" data-gallery="1">
+                        <a data-image="../img/walk_half.gif">Half body walk</a>
+                        <a data-image="../img/walk_jump.gif">Half body walk and jump</a>
+                        <a data-image="../img/sneaky_walk.gif">Half body sneaky walk</a>
+                        <a data-image="../img/walk1.gif">Full body Catwalk</a>
+                    </div>
+                </div>
+                <div class="right-column">
+                    <img id="display-image1" src="../img/walk1.gif" alt="Display" />
+                </div>
+            </div>
+            <div id="section3" class="content">
+                <div class="left-column">
+                    <h2>Run cycle</h2>
+                    <p>For the run cycle exercises, I worked on sequences like running and jumping, as well as running and kicking, to capture fluid transitions and dynamic movement.</p>
+                    <div class="links-container" data-gallery="2">
+                        <a data-image="../img/run_half.gif">Half body run cycle</a>
+                        <a data-image="../img/run.gif">Full body run cycle</a>
+                        <a data-image="../img/run_jump.gif">Run and jump</a>
+                    </div>
+                </div>
+                <div class="right-column">
+                    <img id="display-image2" src="../img/run_jump.gif" alt="Display" />
+                </div>
+            </div>
+            <div id="section4" class="content">
+                <div class="left-column">
+                    <h2>Kicks</h2>
+                    <p>In the run cycle with kicks, I focused on smooth transitions from running to kicking, ensuring both fluidity and impact.</p>
+                    <p>Additionally, I animated a bouncing ball in sync with the kicks, emphasizing timing and interaction between the character and the ball.</p>
+                    <div class="links-container" data-gallery="3">
+                        <a data-image="../img/run_kick.gif">Run and kick</a>
+                        <a data-image="../img/run_kickups.gif">Run and kick ups</a>
+                        <a data-image="../img/run_bicyclekick.gif">Run and bicycle kick</a>
+                    </div>
+                </div>
+                <div class="right-column">
+                    <img id="display-image3" src="../img/run_kickups.gif" alt="Display" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

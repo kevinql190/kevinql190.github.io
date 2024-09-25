@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Portfolio - Visual Identity</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&family=Archivo:ital,wght@0,100..900;1,100..900&family=BioRhyme:wght@200..800&family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Left nav with vertical slider -->
+        <nav class="left-nav">
+            <a href="../index.html"class="return-home div-slides">HOME</a>
+            <div class="slider">
+                <div class="slider-fill"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#section1">I</a></li>
+                <li><a href="#section2">II</a></li>
+            </ul>
+            <ul class="contacts">
+                <li>
+                    <a href="mailto:kevinqiu190@gmail.com">@</a>
+                    <div class="hover-text" id="emailDiv">kevinqiu190@gmail.com</div>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/kevin-qiu-lo-670769313" target="_blank">in</a>
+                    <div class="hover-text"><a href="https://www.linkedin.com/in/kevin-qiu-lo-670769313" target="_blank">Linkedin</a></div>
+                </li>
+                <li>
+                    <a href="https://github.com/kevinql190" target="_blank">GH</a>
+                    <div class="hover-text"><a href="https://github.com/kevinql190" target="_blank">Github</a></div>
+                </li>
+            </ul>
+        </nav>
+    
+        <!-- Main content including hero and content sections -->
+        <div class="content-wrapper">    
+            <!-- Content sections -->
+            <div id="section1" class="content">
+                <div class="left-column">
+                    <h2>Visual Identity Project</h2>
+                    <p>This project consists in creating a brand for an energy drink given a brief.</p>
+                    <p>The exercise includes creating a name and logo, visual identity, and an example of its application.</p>
+                    <p>It aims to develop skills in analyzing and creating graphic content for brand communication<p />
+                    <p>The brief outlines the creation of a new energy drink brand targeting active, health-conscious consumers (18-40 years) interested in extreme sports.</p>
+                    <p>Using my branding knowledge, I designed a visual identity that aligns with the target audience's lifestyle and effectively communicates the brand's energy and values.</p>
+                </div>
+                <div class="right-column">
+                    <div id="slider-container">
+                        <input type="radio" name="slider-container" id="s1" checked>
+                        <input type="radio" name="slider-container" id="s2">
+                        <input type="radio" name="slider-container" id="s3">
+                        <input type="radio" name="slider-container" id="s4">
+                        <input type="radio" name="slider-container" id="s5">
+
+                        <label for="s1" id="slide1" style="background-image: url('../img/identity_guide2.jpg');"></label>
+                        <label for="s2" id="slide2" style="background-image: url('../img/identity_guide3.jpg');"></label>
+                        <label for="s3" id="slide3" style="background-image: url('../img/identity_guide4.jpg');"></label>
+                        <label for="s4" id="slide4" style="background-image: url('../img/identity_guide5.jpg');"></label>
+                        <label for="s5" id="slide5" style="background-image: url('../img/identity_guide6.jpg');"></label>
+                    </div>
+                </div>
+                <div class="scroll-indicator"></div>
+            </div>
+            <div id="section2" class="content">
+                <div class="left-column">
+                    <h2>Project result</h2>
+                </div>
+                <div class="right-column">
+                    <embed src="../docs/Qiu_Kevin_Practica05.pdf" width="100%" height="100%" type="application/pdf" style="margin-right: 7%">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>
