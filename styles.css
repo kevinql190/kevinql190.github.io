@@ -296,7 +296,7 @@ h1 {
 
     .left-column h2 {
         width: 100%;
-        font-size: 3rem;
+        font-size: 5vh;
         padding-block-end: 1rem;
         background: linear-gradient(45deg, #04395e, #829CAF); /* Your gradient colors */
         -webkit-background-clip: text;
@@ -306,13 +306,12 @@ h1 {
     .left-column p {
         color: #dedede;
         width: 100%;
-        font-size: 1.2rem;
+        font-size: 2vh;
         font-weight: 100;
-        padding-block-end: 1.2rem;
+        padding-block-end: 2vh;
     }
 
 .links-container {
-    margin-top: 20px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -326,6 +325,7 @@ h1 {
         padding: 10px 30px;
         background-color: #04395e; /* Button color */
         color: white;
+        font-size: 2vh;
         border: none;
         border-radius: 5px;
         cursor: pointer;
@@ -438,4 +438,66 @@ input[type=radio] {
 #s1:checked ~ #slide5, #s2:checked ~ #slide1, #s3:checked ~ #slide2, #s4:checked ~ #slide3, #s5:checked ~ #slide4 {
     box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
     transform: translate3d(-15%, 0, -100px);
+}
+
+
+
+@media (max-aspect-ratio: 1/1) {
+    .container{
+        flex-direction: column;
+    }
+    .left-nav{
+        position: relative;
+        top: 0px;
+        width: 100%;
+        height: auto;
+        padding: 0px;
+    }
+    .slider, .nav-links{
+        display: none;
+    }
+    .contacts{
+        position: relative;
+        width: 100%;
+        top:0px;
+        display: flex;
+        flex-direction: row;
+        height: fit-content;
+    }
+    .contacts li{
+        padding: 0px;
+        margin: 0px;
+    }
+    .contacts li a{
+        display: none;
+    }
+    .contacts li div a{
+        display: inline;
+    }
+    .hover-text{
+        opacity: 1;
+        position: relative;
+        left:auto;
+        transform: none;
+    }
+    .div-slides{
+        animation: slideIn 0s forwards;
+    }
+    .return-home{
+        position: relative;
+        order: 1;
+        padding: 10px;
+    }
+
+    .content-wrapper{
+        padding: 0px;
+        position: absolute;
+    }
+    .hero, .content{
+        width: 100%;
+        flex-direction: column;
+    }
+    .right-column{
+        display: none;
+    }
 }
