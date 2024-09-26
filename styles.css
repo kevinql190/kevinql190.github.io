@@ -27,7 +27,7 @@ body, html {
 /* Main container with left nav and content */
 .container {
     display: flex;
-    height: 100dvh; /* Full screen height */
+    height: 100vh; /* Full screen height */
     overflow: hidden;
 }
 
@@ -508,6 +508,7 @@ input[type=radio] {
         flex-direction: column;
         padding-top: 80px;
         padding-bottom: 40px;
+        height: 100svh; /* Full screen height */
     }
     .right-column{
         height: fit-content;
