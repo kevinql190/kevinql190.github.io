@@ -496,8 +496,15 @@ input[type=radio] {
     .hero, .content{
         width: 100%;
         flex-direction: column;
+        padding-top: 80px;
+        padding-bottom: 40px;
     }
     .right-column{
-        display: none;
+        height: fit-content;
+        padding: 10px 10%;
+        overflow: hidden;
+    }
+    .right-column img{
+        margin:0px;
     }
 }
