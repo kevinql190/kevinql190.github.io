@@ -27,7 +27,7 @@ body, html {
 /* Main container with left nav and content */
 .container {
     display: flex;
-    height: 100vh; /* Full screen height */
+    height: 100dvh; /* Full screen height */
     overflow: hidden;
 }
 
