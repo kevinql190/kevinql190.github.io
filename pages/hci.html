@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Portfolio - User Centered Design</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&family=Archivo:ital,wght@0,100..900;1,100..900&family=BioRhyme:wght@200..800&family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Left nav with vertical slider -->
+        <nav class="left-nav">
+            <a href="../index.html"class="return-home div-slides">HOME</a>
+            <div class="slider">
+                <div class="slider-fill"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#section1">I</a></li>
+                <li><a href="#section2">II</a></li>
+                <li><a href="#section3">III</a></li>
+            </ul>
+            <ul class="contacts">
+                <li>
+                    <a href="mailto:kevinqiu190@gmail.com">@</a>
+                    <div class="hover-text" id="emailDiv">kevinqiu190@gmail.com</div>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/kevin-qiu-lo-670769313" target="_blank">in</a>
+                    <div class="hover-text"><a href="https://www.linkedin.com/in/kevin-qiu-lo-670769313" target="_blank">Linkedin</a></div>
+                </li>
+                <li>
+                    <a href="https://github.com/kevinql190" target="_blank">GH</a>
+                    <div class="hover-text"><a href="https://github.com/kevinql190" target="_blank">Github</a></div>
+                </li>
+            </ul>
+        </nav>
+    
+        <!-- Main content including hero and content sections -->
+        <div class="content-wrapper">    
+            <!-- Content sections -->
+            <div id="section1" class="content">
+                <div class="left-column">
+                    <h2>Conceptualization</h2>
+                    <p>I completed two projects in User-Centered Design: one focused on redesigning an existing webpage, and the other involved creating a prototype based on my own brief.</p>
+                    <p>For both projects, I began by outlining the brief, then compared our product profile to similar websites we aimed to compete with.</p>
+                    <p>To complete the ideation phase, we created Proto-Personas to define our target audience and validated them through a questionnaire to form the User-Personas.</p>
+                    <div class="links-container" data-gallery="1">
+                        <a data-image="../img/hci1.png">Briefing</a>
+                        <a data-image="../img/hci2.png">Comparative Analysis</a>
+                        <a data-image="../img/hci3.png">Questionnaire for User-Persona</a>
+                    </div>
+                </div>
+                <div class="right-column">
+                    <img id="display-image1" src="../img/hci1.png" alt="Display" />
+                </div>
+                <div class="scroll-indicator"></div>
+            </div>
+            <div id="section2" class="content">
+                <div class="left-column">
+                    <h2>Information Architecture and Navigation Design</h2>
+                    <p>In this phase, Card Sorting and Navigation Testing techniques were applied using the Optimal Workshop platform.</p>
+                    <p>The Card Sorting allowed users to organize content based on their own criteria, helping identify information grouping patterns.</p>
+                    <p>The Navigation Test was designed to ensure the clarity of menu labels, also addressing issues found in the prior Card Sorting results.</p>
+                    <div class="links-container" data-gallery="2">
+                        <a data-image="../img/hci4.png">Card Sorting</a>
+                        <a data-image="../img/hci5.png">Navigation Test</a>
+                    </div>
+                </div>
+                <div class="right-column">
+                    <img id="display-image2" src="../img/hci4.png" alt="Display" />
+                </div>
+            </div>
+            <div id="section3" class="content">
+                <div class="left-column">
+                    <h2>Prototyping</h2>
+                    <p>User Flows were created to design the interaction of the chosen functionalities to prototype. Each flow outlines the user’s path to complete a specific task.</p>
+                    <p>Prototypes were built using Axure: a wireframe to test interactive aspects and layout and a high-fidelity to assess interface appearance.</p>
+                    <p>Usability tests with Eye-Tracking were conducted through the Real Eye platform to iteratively improve the prototypes.</p>
+                    <div class="links-container" data-gallery="3">
+                        <a data-image="../img/hci6.png">User Flows</a>
+                        <a data-image="../img/hci7.png">Wireframe Prototype</a>
+                        <a data-image="../img/hci8.png">High-Fidelity Prototype</a>
+                        <a data-image="../img/hci9.png">Usability Test with Eye-Tracking</a>
+                    </div>
+                </div>
+                <div class="right-column">
+                    <img id="display-image3" src="../img/celery2.png" alt="Display" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>
