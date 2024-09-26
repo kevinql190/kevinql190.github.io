@@ -488,7 +488,17 @@ input[type=radio] {
         order: 1;
         padding: 10px;
     }
-
+    .links-container{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .links-container a{
+        width: 48%;
+        margin: 1%;
+        padding: 10px;
+        text-justify:distribute;
+        flex-grow: 1;
+    }
     .content-wrapper{
         padding: 0px;
         position: absolute;
@@ -506,5 +516,12 @@ input[type=radio] {
     }
     .right-column img{
         margin:0px;
+    }
+    #slider-container{
+        width: 80%;
+        height: 30vh;
+    }
+    #slider-container input[type=radio]{
+        display: none;
     }
 }
